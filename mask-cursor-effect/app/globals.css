@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply !scroll-smooth;
+  }
+  body {
+    @apply bg-black;
+  }
+}
+
+@layer utilities {
+  .heading {
+    @apply font-bold text-4xl md:text-5xl text-center;
+  }
+
+  .main {
+    @apply h-[100vh];
+  }
+
+  .mask {
+    @apply h-full w-full flex items-center justify-center text-[#afa18f] text-[64px] leading-[66px] font-bold
+  }
+  .mbody {
+    @apply h-full w-full flex items-center justify-center text-[#afa18f] text-[64px] leading-[66px] font-bold
+  }
+
+  span {
+    @apply text-[#ec4c39]
+  }
+
+  p {
+    @apply w-[1000px]
+  }
+}
+
+.mask{
+  mask-image: url(../public/mask.svg);
+  background: #ec4c39;
+  mask-repeat: no-repeat;
+  mask-position: 50%;
+  mask-size: 40px;
+  color: black;
+
+}
