@@ -49,8 +49,8 @@ const TextMove = () => {
 
       <div className="sliderContainer">
         <div className="slider">
-          <p ref={firstText} className="para">FreeLance Developer -</p>
-          <p ref={secondText} className="para">FreeLance Developer -</p>
+          <p ref={firstText}>FreeLance Developer -</p>
+          <p ref={secondText}>FreeLance Developer -</p>
         </div>
       </div>
     </div>
