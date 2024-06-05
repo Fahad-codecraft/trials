@@ -25,13 +25,13 @@ const MaskEffect = () => {
             transition={{ type: "tween", ease: "backOut", duration: 0.5 }}
           >
             <p className="param" onMouseEnter={() => { setIsHovered(true) }} onMouseLeave={() => { setIsHovered(false) }}>
-              A visual developer - with skills that haven't been replaced by AI (yet) - making a good shit since 2021 to till date
+              A visual developer - with skills that haven&apos;t been replaced by AI (yet) - making a good shit since 2021 to till date
             </p>
           </motion.div>
         )}
 
         <div className="mbody">
-          <p className="param">I'm a <span className="spanm">selectively skilled</span> product designer with strong focus on producing high quality & impactful digital experience .</p>
+          <p className="param">I&apos;m a <span className="spanm">selectively skilled</span> product designer with strong focus on producing high quality & impactful digital experience .</p>
         </div>
       </div>
     </div>
