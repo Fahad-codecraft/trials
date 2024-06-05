@@ -1,0 +1,364 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer utilities {
+
+  .heading {
+    @apply font-bold text-4xl md:text-5xl text-center;
+  }
+
+  /* Create custom scrollbar */
+  /* For Chrome, Safari, and Edge */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    border: 3px solid transparent;
+    /* to create padding */
+    background-clip: content-box;
+  }
+
+  .custom-scrollbar:hover::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  /* Infinite Text Effect */
+  .divd {
+    @apply relative flex h-[100vh] overflow-hidden
+  }
+
+  .divd img {
+    object-fit: cover;
+  }
+
+  .sliderContainer {
+    position: absolute;
+    top: calc(100vh - 350px);
+  }
+
+  .slider {
+    @apply relative whitespace-nowrap
+  }
+
+  .slider .para {
+    position: relative;
+    margin: 0px;
+    color: gray;
+    font-size: 230px;
+    font-weight: 500;
+    padding-right: 50px;
+  }
+
+  .slider .para:nth-of-type(2) {
+    position: absolute;
+    left: 100%;
+    top: 0;
+  }
+
+  /* END Infinite Text */
+
+
+  /* Mask Effect Classes */
+  .divm {
+    @apply h-screen;
+  }
+
+  .mask {
+    @apply h-full w-full flex items-center justify-center text-[#afa18f] text-[64px] leading-[66px] font-bold
+  }
+
+  .mbody {
+    @apply h-full w-full flex items-center justify-center text-[#afa18f] text-[64px] leading-[66px] font-bold
+  }
+
+  .spanm {
+    @apply text-[#ec4c39]
+  }
+
+  .param {
+    @apply w-[1000px]
+  }
+
+  .mask {
+    mask-image: url(../public/mask.svg);
+    background: #ec4c39;
+    mask-repeat: no-repeat;
+    mask-position: 50%;
+    mask-size: 40px;
+    color: black;
+  }
+
+  /* END Mask Effect */
+
+  /* Scroll Cards effext */
+  .projectsContainer {
+    position: relative;
+    ;
+  }
+
+  .cardContainer {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0px;
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      top: -25%;
+      height: 500px;
+      width: 1000px;
+      border-radius: 25px;
+      padding: 50px;
+      transform-origin: top;
+
+      h2 {
+        text-align: center;
+        margin: 0px;
+        font-size: 28px;
+      }
+
+      .bodyContainer {
+        display: flex;
+        height: 100%;
+        margin-top: 50px;
+        gap: 50px;
+
+        .descriptionContainer {
+          width: 40%;
+          position: relative;
+          top: 10%;
+
+          p {
+            font-size: 16px;
+
+            &::first-letter {
+              font-size: 28px;
+              font-family: 'Title';
+            }
+          }
+
+          span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            a {
+              font-size: 12px;
+              text-decoration: underline;
+              cursor: pointer;
+            }
+          }
+        }
+
+        .imageContainer {
+          position: relative;
+          width: 60%;
+          height: 100%;
+          border-radius: 25px;
+          overflow: hidden;
+
+          .inner {
+            width: 100%;
+            height: 100%;
+          }
+
+          img {
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+
+  /* END Scroll Cards */
+
+  /* Text Clip Mask */
+  .container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    background: black;
+    padding-bottom: 2rem;
+  }
+
+  .textClipMain {
+    height: auto;
+    /* Adjust height as needed */
+    min-height: 60vh;
+    /* Ensure it doesn't occupy full viewport height */
+    background-color: #0f0f0f;
+    margin-top: 100vh;
+    margin-bottom: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .titles {
+    width: 100%;
+    border-top: 1px solid rgba(183, 171, 152, 0.25);
+
+    .title {
+      border-bottom: 1px solid rgba(183, 171, 152, 0.25);
+      cursor: default;
+      position: relative;
+      z-index: 2;
+
+      .wrapper {
+        display: inline-block;
+        padding-left: 10%;
+        cursor: pointer;
+
+        p {
+          display: inline-block;
+          color: #b7ab98;
+          text-transform: uppercase;
+          font-weight: 700;
+          font-size: 5.5vw;
+          line-height: 5vw;
+          margin: 0px;
+          position: relative;
+          z-index: 2;
+
+          &:nth-of-type(2) {
+            display: block;
+            position: absolute;
+            color: #1c1c1c;
+            top: 0;
+            z-index: 1;
+          }
+        }
+      }
+    }
+
+  }
+
+  .descriptions {
+    position: absolute;
+    top: 3px;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    pointer-events: none;
+
+    .description {
+      background-color: #ec4e39;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 10%;
+      padding-right: 10%;
+      clip-path: inset(50% 0 50%);
+      transition: clip-path .4s;
+
+      p {
+        &:nth-of-type(1) {
+          color: #010101;
+          text-transform: uppercase;
+          font-weight: 700;
+          font-size: 5.5vw;
+          line-height: 5vw;
+          margin: 0px;
+          position: relative;
+          z-index: 1;
+        }
+
+        &:nth-of-type(2) {
+          width: 40%;
+          font-size: 1vw;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  .footer {
+    position: relative;
+    z-index: 1;
+    ;
+    padding: 2rem;
+  }
+
+  .titleFooter {
+    border-bottom: 1px solid rgba(183, 171, 152, 0.25);
+    cursor: default;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    overflow: hidden;
+    @apply pr-2 pl-2;
+
+    .wrapperFooter {
+      display: inline-block;
+      padding-left: 10%;
+      cursor: pointer;
+
+      p {
+        color: #b7ab98;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 2rem;
+        /* line-height: 7.5vw; */
+        margin: 0px;
+        position: relative;
+        z-index: 2;
+
+        &:nth-of-type(2) {
+          display: block;
+          position: absolute;
+          color: #1c1c1c;
+          top: 0;
+          z-index: 1;
+        }
+      }
+    }
+  }
+
+  .descriptionsFooter {
+    position: absolute;
+    top: 3px;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    pointer-events: none;
+
+    .descriptionFooter {
+      background-color: #ec4e39;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @apply pr-2 pl-2;
+      clip-path: inset(50% 0 50%);
+      transition: clip-path .4s;
+
+      p {
+        color: black;
+
+        &:nth-of-type(2) {
+          width: 100%;
+          font-size: 2rem;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+}
