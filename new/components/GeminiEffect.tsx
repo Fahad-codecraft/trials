@@ -18,7 +18,7 @@ export function GeminiEffect() {
 
   return (
     <div
-      className="h-[50vw] bg-black w-full dark:border dark:border-white/[0.1] rounded-md relative"
+      className="h-[50vw] bg-black w-full dark:border dark:border-white/[0.1] rounded-md absolute"
       ref={ref}
     >
       <GoogleGeminiEffect

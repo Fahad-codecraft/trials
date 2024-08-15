@@ -291,9 +291,7 @@
   }
 
   .footer {
-    position: relative;
     z-index: 1;
-    ;
     padding: 2rem;
   }
 
@@ -361,4 +359,13 @@
     }
   }
 
+  .cursor {
+    position: fixed;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1000;
+  }
 }
